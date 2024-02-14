@@ -9,7 +9,7 @@ const hl2reboot = {
   api_value: 1,
   steam_value: 1,
   telemetryEnabled: false,
-  cookiesEnabled: false
+  discordrpc_value: 1
 }
 
 // Видео Ютуба Embed
