@@ -4,5 +4,5 @@ const verisonAPI = { name: '3.0' };
 const verisonSite = { name: '5.0' };
 console.log(nameAPI);
 console.log(nameSite);
-console.log(versionSite);
 console.log(versionAPI);
+console.log(versionSite);
