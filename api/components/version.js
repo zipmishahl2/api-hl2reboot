@@ -1,14 +1,8 @@
-var salaries = {
-    "hl2reboot.api": 3.0,
-    "hl2reboot.vercel.app": 5.0
-};
-
-function changeObject(object) {
-    for (var verison in object) {
-        object[verison] += 100;
-    }
-}
-
-console.dir(salaries);
-changeObject(salaries);
-console.dir(salaries);
+const nameAPI = { name: 'hl2reboot.api' };
+const nameSite = { name: 'hl2reboot.vercel.app' };
+const verisonAPI = { name: '3.0' };
+const verisonSite = { name: '5.0' };
+console.log(nameAPI);
+console.log(nameSite);
+console.log(versionSite);
+console.log(versionAPI);
