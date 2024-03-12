@@ -4,10 +4,13 @@
 <script type="module" src="api/pages/index.js"></script>
 <title>hl2reboot.api</title>
 <h1>hl2reboot.api</h1>
-<div id="Date"></div>
-<div id="time"></div>
 <script>
-  var Date = new Date(); document. getElementById("time");
+var timeInMs = Date.now();
+if (!Date.now) {
+  Date.now = function now() {
+    return new Date().getTime();
+  };
+}
 </script>
 <script>
 let body = document.querySelector('body');
