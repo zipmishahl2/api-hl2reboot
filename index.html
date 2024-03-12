@@ -1,6 +1,5 @@
 <html>
 <title>hl2reboot.api</title>
-<script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/components/Time.js"></script>
 <link rel="stylesheet" href="style.css">
 <div class="clock">
   <ul>
@@ -11,6 +10,23 @@
     <li id="seconds">00</li>
   </ul>
 </div>
+<script>
+  window.onload = function() {
+  setInterval(function() {
+    // Seconds
+    var seconds = new Date().getSeconds();
+    document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
+
+    // Minutes
+    var minutes = new Date().getMinutes();
+    document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
+
+    // Hours
+    var hours = new Date().getHours();
+    document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
+  }, 1000);
+  }
+</script>
 <script>
 let body = document.querySelector('body');
 const company = { name: 'ShonikSoftware Team' };
