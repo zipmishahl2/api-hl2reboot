@@ -1,5 +1,5 @@
 const currentDate = new Date();
-const targetDate = new Date("2024-04-01");
+const targetDate = new Date("2024-03-13");
 
 if (currentDate.getMonth() === targetDate.getMonth() && currentDate.getDate() === targetDate.getDate()) {
   // code to start fireworks
