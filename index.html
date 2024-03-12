@@ -2,6 +2,7 @@
 <body id="root">
 <title>hl2reboot.api</title>
 <link rel="stylesheet" href="style.css">
+<canvas id="fireworks"></canvas>
 <div class="clock">
   <ul>
     <li id="hours">00</li>
@@ -36,6 +37,47 @@ const nameSite = { name: 'hl2reboot.vercel.app version 5.0' };
 console.log(company);
 console.log(nameAPI);
 console.log(nameSite);
+</script>
+<script>
+  const currentDate = new Date();
+const targetDate = new Date("2023-04-01");
+
+if (currentDate.getMonth() === targetDate.getMonth() && currentDate.getDate() === targetDate.getDate()) {
+  // code to start fireworks
+  document.body.innerHTML = '<canvas id="fireworks"></canvas>';
+  
+  function randomColor() {
+    return Math.floor(Math.random() * 255);
+  }
+  
+  function launchFirework() {
+    const firework = new Firework();
+    fireworks.push(firework);
+  }
+  
+  const fireworks = [];
+  
+  function update() {
+    fireworks.forEach((firework, index) => {
+      firework.update();
+      if (firework.done) {
+        fireworks.splice(index, 1);
+      }
+    });
+  
+    if (Math.random() < 0.1) {
+      launchFirework();
+    }
+  }
+  
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+  
+  loop();
+}
 </script>
 <script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/pages/posts/index.js"></script>
 <script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/components/Socials.js"></script>
