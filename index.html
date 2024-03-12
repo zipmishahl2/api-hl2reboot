@@ -1,17 +1,7 @@
 <html>
 <body>
-<div id="root"></div>
-<script type="module" src="api/pages/index.js"></script>
 <title>hl2reboot.api</title>
 <h1>hl2reboot.api</h1>
-<script>
-var timeInMs = Date.now();
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
-  };
-}
-</script>
 <script>
 let body = document.querySelector('body');
 const company = { name: 'ShonikSoftware Team' };
@@ -21,6 +11,7 @@ console.log(company);
 console.log(nameAPI);
 console.log(nameSite);
 </script>
+<script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/components/Time.js"></script>
 <script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/pages/posts/index.js"></script>
 <script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/components/Socials.js"></script>
 <script src="https://raw.githubusercontent.com/zipmishahl2/hl2reboot.api/main/api/pages/api/socials.js"></script>
