@@ -1,0 +1,77 @@
+<?php
+$this->addJS("templates/default/widgets/besttimer/js/jquery.cookie.min.js");
+?>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+</div>
+<div class="modal-body">
+<?= $cont; ?>
+</div>
+<div class="modal-footer">
+<div class="banner-modal-hide" <?php if ($hide) echo 'style="display: none;"';?>>
+<input class='modal-check' name='modal-check' type="checkbox"> Больше не показывать это
+</div>
+<button type="button" class="<?= $buttontype; ?>" data-dismiss="modal"><?= $buttontext; ?></button>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 0 solid #0079f3;
+    border-bottom-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    background: #e1e1e1;
+}
+
+</style>
+
+<script>
+function explode(){
+// $(document).ready(function() {
+$("#staticBackdrop").modal('show');
+// });
+}
+
+setTimeout(explode, <?= $sec; ?>);
+
+</script>
+
+<script type = "text/javascript">
+
+$(document).ready(function(){
+    var my_cookie = $.cookie($('.modal-check').attr('name'));
+    if (!my_cookie) {
+         $('#myModal').modal('show');
+    }
+
+    $(".modal-check").change(function() {
+        $.cookie($(this).attr("name"), $(this).prop('checked'), {
+            path: '/',
+            expires: 1
+        });
+    });
+});
+    else{
+        $('#myModal').modal('show');
+        console.log('uncheck checkbox');
+    }
+
+    $(".modal-check").change(function() {
+        $.cookie($(this).attr("name"), $(this).prop('checked'), {
+            path: '/',
+            expires: 1
+        });
+    });
+
+</script>
