@@ -9,11 +9,8 @@ for j in ( i inline ) ( ib inline-block ) ( b block ) ( n none ) ( f flex ) ( 'i
 .vm
     vertical-align middle
 
-// ====================================
 
 $body-bg = #24282f
-
-// ====================================
 
 body
     background $body-bg
